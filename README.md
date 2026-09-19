@@ -1,4 +1,5 @@
 ZATCA.app - Saudi E-Invoicing & Compliance Platform 🇸🇦
+Disclaimer: ZATCA.app is built independently to fulfill Saudi e-invoicing technical specifications.<img width="1520" height="855" alt="{805B931C-FB80-465E-99A3-403A0E6B5D3C}" src="https://github.com/user-attachments/assets/d2201b9c-3478-48bd-b0e0-6e33a16d0caa" />
 
 ZATCA.app is a full-stack, enterprise-grade e-invoicing web platform built with Laravel and Livewire. It provides a seamless, secure, and fully compliant solution for businesses operating in Saudi Arabia to issue, manage, and report electronic invoices in accordance with the Zakat, Tax and Customs Authority (ZATCA / Fatoora) regulations for Phase 1 (Generation) and Phase 2 (Integration).
 
@@ -107,4 +108,3 @@ GitHub: @saeedawd
 
 Website: zatca.app
 
-Disclaimer: ZATCA.app is built independently to fulfill Saudi e-invoicing technical specifications.<img width="1520" height="855" alt="{805B931C-FB80-465E-99A3-403A0E6B5D3C}" src="https://github.com/user-attachments/assets/d2201b9c-3478-48bd-b0e0-6e33a16d0caa" />

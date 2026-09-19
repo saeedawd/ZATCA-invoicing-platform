@@ -1,110 +1,150 @@
-ZATCA.app - Saudi E-Invoicing & Compliance Platform 🇸🇦
-Disclaimer: ZATCA.app is built independently to fulfill Saudi e-invoicing technical specifications.<img width="1520" height="855" alt="{805B931C-FB80-465E-99A3-403A0E6B5D3C}" src="https://github.com/user-attachments/assets/d2201b9c-3478-48bd-b0e0-6e33a16d0caa" />
+# ZATCA.app 🇸🇦
+### Saudi E-Invoicing & Compliance Platform
 
-ZATCA.app is a full-stack, enterprise-grade e-invoicing web platform built with Laravel and Livewire. It provides a seamless, secure, and fully compliant solution for businesses operating in Saudi Arabia to issue, manage, and report electronic invoices in accordance with the Zakat, Tax and Customs Authority (ZATCA / Fatoora) regulations for Phase 1 (Generation) and Phase 2 (Integration).
+A full-stack e-invoicing platform built for Saudi businesses, designed around ZATCA's e-invoicing requirements and workflows.
 
- Key Features
+> Built independently with Laravel and Livewire, focusing on real-world invoicing, VAT, payment tracking, and ZATCA integration workflows.
 
- Invoice & Quotation Management
+<img width="1520" height="855" alt="ZATCA.app Dashboard" src="https://github.com/user-attachments/assets/d2201b9c-3478-48bd-b0e0-6e33a16d0caa" />
 
-B2B & B2C Compliance: Supports generation of Standard Tax Invoices (B2B/B2G) and Simplified Tax Invoices (B2C).
+---
 
-Automated Calculations: Real-time tax (VAT 15%) computation, line-item discounts, and subtotal handling.
+## 🚀 Overview
 
-Quotations & Debit/Credit Notes: Issue compliant debit and credit notes directly linked to original tax invoices.
+ZATCA.app is an enterprise-grade Saudi e-invoicing platform built with **Laravel and Livewire**.
 
-Custom PDF & Printing: Generates print-ready PDF invoices formatted according to Saudi regulatory layout standards.
+The platform brings invoicing, quotations, VAT calculations, payment tracking, customer management, PDF generation, QR codes, XML generation, and ZATCA integration workflows into a single system.
 
- ZATCA Phase 1 & 2 Readiness
+It is designed around the technical requirements and workflows of **Saudi e-invoicing — Phase 1 and Phase 2**.
 
-Cryptographic QR Code Generation: On-the-fly TLV Base64 encoding for invoice QR codes containing seller VAT, timestamp, totals, and cryptographic stamps.
+---
 
-XML / UBL 2.1 Standard: Structured invoice data formatted for seamless submission to ZATCA's Fatoora API portal.
+## ✨ Key Features
 
-Cryptographic Hashing & Signing: ECDSA signing and SHA-256 hash validation for audit-proof record keeping.
+### 🧾 Invoice & Quotation Management
 
-UUID Tracking: Universal Unique Identifier generation per transaction.
+- B2B, B2C, and B2G invoice workflows
+- Standard Tax Invoices
+- Simplified Tax Invoices
+- Quotations
+- Debit Notes
+- Credit Notes
+- Invoice-to-note relationship tracking
+- Automatic VAT calculation (15%)
+- Line-item discounts
+- Subtotal and total calculations
+- Invoice status tracking
+- Custom PDF invoice generation
+- Print-ready Saudi invoice layouts
 
- Business & Multi-Tenant Features
+---
 
-Organization Profiles: Manage commercial registration (CR), VAT identification number, and business branding (logos, stamps).
+### 🇸🇦 ZATCA Phase 1 & Phase 2
 
-Payment Tracking: Real-time tracking for unpaid, partially paid, and cleared client balances.
+Built around Saudi e-invoicing technical workflows, including:
 
-Client & Supplier Directory: Centralized management of buyer identification details and tax metadata.
+- QR Code generation
+- TLV encoding
+- Base64 encoding
+- Seller VAT number
+- Invoice timestamp
+- Invoice totals
+- Cryptographic stamp handling
+- XML invoice generation
+- UBL 2.1 structure
+- Invoice UUID generation
+- Invoice hashing
+- ECDSA signing
+- SHA-256 validation
+- ZATCA API integration workflow
 
-Livewire Interactive UI: Ultra-fast, single-page application experience without heavy browser reloads.
+---
 
-🛠️ Tech Stack & Architecture
+## 🏢 Business Management
 
-Backend Framework: Laravel 11.x
+### Organization Management
 
-Reactivity / Frontend: Livewire 3.x, Alpine.js, Tailwind CSS
+Each business can manage:
 
-Database: MySQL
+- Commercial Registration (CR)
+- VAT Registration Number
+- Company information
+- Business address
+- Logo
+- Stamp
+- Invoice branding
 
-PDF & Security Engine: Dompdf / TCPDF, OpenSSL Cryptographic Utilities
+### 💳 Payment Tracking
 
-Architecture Pattern: Service Repository Pattern & Event-Driven Architecture
+Track customer payments in real time:
 
-🚀 Getting Started Locally
+- Unpaid invoices
+- Partially paid invoices
+- Fully paid invoices
+- Outstanding balances
+- Payment history
+- Invoice payment status
 
-Prerequisites
+### 👥 Customers & Suppliers
 
-PHP >= 8.2
+Centralized management for:
 
-Composer
+- Customers
+- Suppliers
+- VAT numbers
+- Commercial registration numbers
+- Business identification
+- Billing information
+- Tax-related metadata
 
-Node.js & NPM
+---
 
-MySQL Database
+## ⚡ Interactive Experience
 
-Installation Steps
+The application uses **Livewire 3** to provide a fast, interactive experience without requiring full-page browser reloads for most operations.
 
-Clone the Repository:
+The interface combines:
 
-git clone https://github.com/saeedawd/zatca-invoicing-platform.git
-cd zatca-invoicing-platform
+- Livewire
+- Alpine.js
+- Tailwind CSS
+- Responsive dashboards
+- Interactive tables
+- Real-time form validation
+- Dynamic invoice management
 
+---
 
-Install Dependencies:
+## 🛠️ Tech Stack
 
-composer install
-npm install && npm run build
+| Layer | Technology |
+|---|---|
+| Backend | Laravel 12 |
+| PHP | PHP 8.3+ |
+| Frontend | Livewire 3 |
+| JavaScript | Alpine.js |
+| CSS | Tailwind CSS |
+| Database | MySQL |
+| PDF | Dompdf / TCPDF |
+| Cryptography | OpenSSL |
+| API | REST / ZATCA APIs |
+| Architecture | Service & Repository Pattern |
+| Events | Event-Driven Architecture |
 
+---
 
-Configure Environment:
-Copy the environment template and set your database and ZATCA credentials:
+## 🏗️ Architecture
 
-cp .env.example .env
-php artisan key:generate
+The application follows a modular architecture designed to keep business logic separated from controllers and UI components.
 
-
-Run Migrations & Seeders:
-
-php artisan migrate --seed
-
-
-Start Local Development Server:
-
-php artisan serve
-
-
- Security & Privacy Notice
-
-This repository contains NO production keys, sensitive API credentials, or digital certificates.
-
-Configuration properties rely strictly on environment variables (.env).
-
-Certificate paths, private keys (.pem, .pfx), and local database files are explicitly ignored via .gitignore.
-
- Author & Contact
-
-Elsaid Awad
-
-Full-Stack Laravel / SaaS Developer
-
-GitHub: @saeedawd
-
-Website: zatca.app
-
+```text
+Application
+│
+├── Controllers
+├── Livewire Components
+├── Services
+├── Repositories
+├── Events & Listeners
+├── Models
+├── Policies
+└── Support / Helpers

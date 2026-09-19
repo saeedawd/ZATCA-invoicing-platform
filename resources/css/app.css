@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-sans text-slate-800 antialiased;
+    }
+
+    [x-cloak] {
+        display: none !important;
+    }
+}
+
+@layer components {
+    .ui-select {
+        @apply rounded-lg border-slate-200 bg-white text-sm text-slate-800 shadow-sm
+            focus:border-brand-600 focus:ring-brand-600;
+    }
+
+    .data-table {
+        @apply min-w-full text-sm;
+    }
+
+    .data-table thead {
+        @apply bg-slate-50/90;
+    }
+
+    .data-table th {
+        @apply px-4 py-3 text-start text-xs font-semibold tracking-wide text-slate-500;
+    }
+
+    .data-table td {
+        @apply px-4 py-3.5 text-start text-slate-700;
+    }
+
+    .data-table td.data-table-empty {
+        @apply py-10 !text-center text-slate-500;
+    }
+
+    .data-table .col-actions {
+        @apply w-28 whitespace-nowrap;
+    }
+
+    .data-table .col-actions > div {
+        @apply flex items-center justify-end gap-1;
+    }
+
+    .data-table tbody tr {
+        @apply border-t border-slate-100 transition-colors hover:bg-slate-50/80;
+    }
+
+    .alert-success {
+        @apply rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800;
+    }
+
+    .alert-warning {
+        @apply rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900;
+    }
+
+    .alert-info {
+        @apply rounded-xl border border-sky-200 bg-sky-50 px-4 py-3 text-sm text-sky-900;
+    }
+
+    .alert-danger {
+        @apply rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-800;
+    }
+
+    .btn-ghost {
+        @apply inline-flex items-center justify-center gap-1 rounded-lg bg-brand-50 px-2.5 py-1 text-xs font-bold text-brand-800 ring-1 ring-brand-200 transition hover:bg-brand-100 hover:text-brand-900;
+    }
+}
+
+@layer utilities {
+    .mkt-hero-bg {
+        background:
+            radial-gradient(ellipse 80% 60% at 100% 0%, rgba(16, 185, 129, 0.18), transparent 55%),
+            radial-gradient(ellipse 60% 50% at 0% 100%, rgba(5, 150, 105, 0.12), transparent 50%),
+            #F4F7F6;
+    }
+
+    .mkt-fade-up {
+        animation: mkt-fade-up 0.7s ease-out both;
+    }
+
+    .mkt-fade-up-delay {
+        animation: mkt-fade-up 0.7s ease-out 0.15s both;
+    }
+
+    .mkt-fade-up-delay-2 {
+        animation: mkt-fade-up 0.7s ease-out 0.3s both;
+    }
+}
+
+@media (max-width: 1023px) {
+    body.sidebar-open #app-sidebar {
+        transform: translateX(0) !important;
+    }
+}
+
+@keyframes mkt-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
